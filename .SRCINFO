@@ -24,127 +24,95 @@ pkgname = python-standard-aifc
 pkgname = python-standard-asynchat
 	pkgdesc = Standard library asynchat redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-asynchat
 	conflicts = python-asynchat
 
 pkgname = python-standard-asyncore
 	pkgdesc = Standard library asyncore redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-asyncore
 	conflicts = python-asyncore
 
 pkgname = python-standard-cgi
 	pkgdesc = Standard library cgi redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-cgi
 	conflicts = python-cgi
 
 pkgname = python-standard-cgitb
 	pkgdesc = Standard library cgitb redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-cgitb
 	conflicts = python-cgitb
 
 pkgname = python-standard-chunk
 	pkgdesc = Standard library chunk redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-chunk
 	conflicts = python-chunk
 
 pkgname = python-standard-crypt
 	pkgdesc = Standard library crypt redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-crypt
 	conflicts = python-crypt
 
 pkgname = python-standard-imghdr
 	pkgdesc = Standard library imghdr redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-imghdr
 	conflicts = python-imghdr
 
 pkgname = python-standard-mailcap
 	pkgdesc = Standard library mailcap redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-mailcap
 	conflicts = python-mailcap
 
 pkgname = python-standard-nntplib
 	pkgdesc = Standard library nntplib redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-nntplib
 	conflicts = python-nntplib
 
 pkgname = python-standard-pipes
 	pkgdesc = Standard library pipes redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-pipes
 	conflicts = python-pipes
 
 pkgname = python-standard-smtpd
 	pkgdesc = Standard library smtpd redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-smtpd
 	conflicts = python-smtpd
 
 pkgname = python-standard-sndhdr
 	pkgdesc = Standard library sndhdr redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-sndhdr
 	conflicts = python-sndhdr
 
 pkgname = python-standard-sunau
 	pkgdesc = Standard library sunau redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-sunau
 	conflicts = python-sunau
 
 pkgname = python-standard-telnetlib
 	pkgdesc = Standard library telnetlib redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-telnetlib
 	conflicts = python-telnetlib
 
 pkgname = python-standard-uu
 	pkgdesc = Standard library uu redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-uu
 	conflicts = python-uu
 
 pkgname = python-standard-xdrlib
 	pkgdesc = Standard library xdrlib redistribution.
 	depends = python
-	depends = python-chunk
-	depends = python-audioop
 	provides = python-xdrlib
 	conflicts = python-xdrlib

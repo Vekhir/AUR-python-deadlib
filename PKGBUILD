@@ -9,12 +9,14 @@ url="https://github.com/youknowone/python-deadlib"
 license=('PSF-2.0')
 arch=('any')
 
-special_deps=(
-  ["aifc"]="('python-chunk' 'python-audioop')"
-)
 depends=(
   'python'
 )
+declare -A special_deps
+special_deps=(
+  ["aifc"]="'python-chunk' 'python-audioop'"
+)
+
 makedepends=(
   'python-build'
   'python-installer'
@@ -65,14 +67,12 @@ for i in "${_modules[@]}"; do
   pkgname+=(
     "$_modulename"
   )
-  # create package_* function
+  # create package_* function using here documents
   # Note: variables inside the package function must be escaped
-  deps=${special_deps["$i"]}
   eval "$(cat <<_packaging_functions
     package_${_modulename}() {
       pkgdesc="Standard library $i redistribution."
-      depends+=${special_deps[$i]}
-      echo "${depends[@]}"
+      depends+=(${special_deps[$i]})
       provides+=(
         "python-$i"
       )

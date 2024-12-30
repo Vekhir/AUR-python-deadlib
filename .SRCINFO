@@ -13,8 +13,29 @@ pkgbase = python-deadlib
 	source = python-deadlib-3.13.0.tar.gz::https://github.com/youknowone/python-deadlib/archive/refs/tags/v3.13.0.tar.gz
 	sha256sums = bde43692d5a1de2a33777ff99f4c4344f7cca3a49362b2484a13870706194613
 
+pkgname = python-deadlib-meta
+	pkgdesc = Python dead batteries. See PEP 594 - metapackage
+	depends = python-standard-aifc
+	depends = python-standard-asynchat
+	depends = python-standard-asyncore
+	depends = python-standard-cgi
+	depends = python-standard-cgitb
+	depends = python-standard-chunk
+	depends = python-standard-crypt
+	depends = python-standard-imghdr
+	depends = python-standard-mailcap
+	depends = python-standard-nntplib
+	depends = python-standard-pipes
+	depends = python-standard-smtpd
+	depends = python-standard-sndhdr
+	depends = python-standard-sunau
+	depends = python-standard-telnetlib
+	depends = python-standard-uu
+	depends = python-standard-xdrlib
+
 pkgname = python-standard-aifc
 	pkgdesc = Standard library aifc redistribution.
+	groups = python-deadlib
 	depends = python
 	depends = python-chunk
 	depends = python-audioop
@@ -23,96 +44,117 @@ pkgname = python-standard-aifc
 
 pkgname = python-standard-asynchat
 	pkgdesc = Standard library asynchat redistribution.
+	groups = python-deadlib
 	depends = python
+	depends = python-asyncore
 	provides = python-asynchat
 	conflicts = python-asynchat
 
 pkgname = python-standard-asyncore
 	pkgdesc = Standard library asyncore redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-asyncore
 	conflicts = python-asyncore
 
 pkgname = python-standard-cgi
 	pkgdesc = Standard library cgi redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-cgi
 	conflicts = python-cgi
 
 pkgname = python-standard-cgitb
 	pkgdesc = Standard library cgitb redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-cgitb
 	conflicts = python-cgitb
 
 pkgname = python-standard-chunk
 	pkgdesc = Standard library chunk redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-chunk
 	conflicts = python-chunk
 
 pkgname = python-standard-crypt
 	pkgdesc = Standard library crypt redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-crypt
 	conflicts = python-crypt
 
 pkgname = python-standard-imghdr
 	pkgdesc = Standard library imghdr redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-imghdr
 	conflicts = python-imghdr
 
 pkgname = python-standard-mailcap
 	pkgdesc = Standard library mailcap redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-mailcap
 	conflicts = python-mailcap
 
 pkgname = python-standard-nntplib
 	pkgdesc = Standard library nntplib redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-nntplib
 	conflicts = python-nntplib
 
 pkgname = python-standard-pipes
 	pkgdesc = Standard library pipes redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-pipes
 	conflicts = python-pipes
 
 pkgname = python-standard-smtpd
 	pkgdesc = Standard library smtpd redistribution.
+	groups = python-deadlib
 	depends = python
+	depends = python-asyncore
+	depends = python-asynchat
 	provides = python-smtpd
 	conflicts = python-smtpd
 
 pkgname = python-standard-sndhdr
 	pkgdesc = Standard library sndhdr redistribution.
+	groups = python-deadlib
 	depends = python
+	depends = python-aifc
 	provides = python-sndhdr
 	conflicts = python-sndhdr
 
 pkgname = python-standard-sunau
 	pkgdesc = Standard library sunau redistribution.
+	groups = python-deadlib
 	depends = python
+	depends = python-audioop
 	provides = python-sunau
 	conflicts = python-sunau
 
 pkgname = python-standard-telnetlib
 	pkgdesc = Standard library telnetlib redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-telnetlib
 	conflicts = python-telnetlib
 
 pkgname = python-standard-uu
 	pkgdesc = Standard library uu redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-uu
 	conflicts = python-uu
 
 pkgname = python-standard-xdrlib
 	pkgdesc = Standard library xdrlib redistribution.
+	groups = python-deadlib
 	depends = python
 	provides = python-xdrlib
 	conflicts = python-xdrlib

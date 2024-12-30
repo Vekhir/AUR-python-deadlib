@@ -2,6 +2,7 @@
 
 _pkgname="python-deadlib"
 pkgbase="$_pkgname"
+pkgname=($_pkgname-meta)
 pkgdesc="Python dead batteries. See PEP 594"
 pkgver=3.13.0
 pkgrel=1
@@ -12,10 +13,12 @@ arch=('any')
 depends=(
   'python'
 )
-declare -A special_deps
-special_deps=(
-  ["aifc"]="'python-chunk' 'python-audioop'"
-)
+declare -A _split_depends
+_split_depends["aifc"]="'python-chunk' 'python-audioop'"
+_split_depends["asynchat"]="'python-asyncore'"
+_split_depends["smtpd"]="'python-asyncore' 'python-asynchat'"
+_split_depends["sndhdr"]="'python-aifc'"
+_split_depends["sunau"]="'python-audioop'"
 
 makedepends=(
   'python-build'
@@ -64,25 +67,33 @@ build() {
 
 for i in "${_modules[@]}"; do
   _modulename=python-standard-$i
-  pkgname+=(
-    "$_modulename"
-  )
+  pkgname+=("$_modulename")
+  _depends+=("$_modulename")
+
   # create package_* function using here documents
   # Note: variables inside the package function must be escaped
-  eval "$(cat <<_packaging_functions
+  eval "$(cat <<END
     package_${_modulename}() {
       pkgdesc="Standard library $i redistribution."
-      depends+=(${special_deps[$i]})
+      depends+=(${_split_depends[$i]})
       provides+=(
         "python-$i"
       )
       conflicts+=(
         "python-$i"
       )
+      groups=(
+        $_pkgname
+      )
       cd "$_pkgsrc/$i"
       python -m installer --destdir="\$pkgdir/" dist/*.whl
       install -Dm644 LICENSE "\${pkgdir}/usr/share/licenses/${_modulename}/LICENSE"
     }
-_packaging_functions
+END
   )"
 done
+
+package_python-deadlib-meta() {
+  pkgdesc+=" - metapackage"
+  depends=("${_depends[@]}")
+}
